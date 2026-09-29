@@ -1,25 +1,11 @@
-# DRAGON WEAR — HTTPS-ready storefront
+# DRAGON WEAR — Ultimate Store
 
-This package serves the DRAGON WEAR storefront through an Express web service and is prepared for Render deployment.
+Includes the 98-product embedded catalog, men's and women's streetwear collections, original dragon design presentation, quick view, size/colour selection, wishlist, cart variants, search, currency display, responsive mobile navigation, trust/footer sections, and the Express 5 HTTPS-ready server.
 
-## Local test
-1. Install Node.js 20+.
-2. Run `npm install`.
-3. Run `npm start`.
-4. Open `http://localhost:3000`.
+## Render
+- Build Command: `npm install`
+- Start Command: `npm start`
+- Health check: `/health`
+- Custom domain/TLS can be configured in Render after deployment.
 
-## Render deployment
-1. Put this folder in a GitHub repository.
-2. In Render, create a Web Service from the repository, or use the included `render.yaml` Blueprint.
-3. Render runs `npm ci` then `npm start`.
-4. Render provides a public `*.onrender.com` address.
-5. Add `dragonwear.com` under the service's Custom Domains.
-6. At your domain registrar, add the DNS records Render gives you.
-7. Verify the domain in Render.
-
-Render automatically provisions and renews TLS certificates and redirects HTTP to HTTPS.
-
-## Important
-- Do not put Paystack secret keys in frontend HTML or GitHub.
-- Add production secrets through Render environment variables.
-- The current storefront is a frontend/demo checkout unless a payment backend is connected and configured.
+Do not put Paystack secret keys in the frontend. Add them as Render environment variables when the payment backend is ready.
