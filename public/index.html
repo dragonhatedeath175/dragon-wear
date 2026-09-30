@@ -378,45 +378,27 @@ body{margin:0!important;overflow-x:hidden!important}
 .dragon-campaign-label span{color:#ff4b3e}
 @media(max-width:700px){.dragon-campaign{min-height:360px;background-position:center top}.dragon-campaign-label{left:5%;bottom:18px;font-size:10px}}
 </style>
-
-<style id="dragon-final-overrides">
-:root{--dw-bg:#f7f7f5;--dw-card:#fff;--dw-text:#111;--dw-muted:#666;--dw-line:#e6e6e3}
-body{background:var(--dw-bg)!important;color:var(--dw-text)!important}
-.dw-final-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px!important}
-.dw-product{background:#fff;border:0!important;border-radius:0!important;overflow:hidden;position:relative;min-width:0;transition:transform .2s ease}
-.dw-product:hover{transform:translateY(-3px)}
-.dw-product-media{position:relative;aspect-ratio:1/1.08;background:#f1f1ef;overflow:hidden}
-.dw-product-media img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s ease}
-.dw-product:hover .dw-product-media img{transform:scale(1.025)}
-.dw-product-wish{position:absolute;right:12px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:20px;cursor:pointer;box-shadow:0 2px 12px #00000012}
-.dw-product-info{padding:13px 4px 18px}
-.dw-product-name{font-size:15px;font-weight:600;line-height:1.3;margin:0 0 4px}
-.dw-product-meta{font-size:13px;color:#666;margin-bottom:6px}
-.dw-product-price{font-size:14px;font-weight:600}
-.dw-product-actions{display:flex;gap:8px;margin-top:12px}
-.dw-product-actions button{flex:1;min-height:40px}
-.dw-badge{position:absolute;left:12px;top:12px;background:#111;color:#fff;font-size:10px;padding:6px 8px;letter-spacing:.08em}
-.dw-cart-layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:50px;align-items:start}
-.dw-cart-item{display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:22px;padding:22px 0;border-bottom:1px solid var(--dw-line);align-items:start}
-.dw-cart-img{width:170px;height:190px;object-fit:cover;background:#f1f1ef}
-.dw-cart-title{font-size:17px;font-weight:600;margin-bottom:6px}
-.dw-cart-sub{color:#666;font-size:13px;margin-bottom:20px}
-.dw-cart-controls{display:flex;align-items:center;gap:0}
-.dw-cart-controls button{border:1px solid #ddd;background:#fff;min-width:38px;height:38px;cursor:pointer}
-.dw-cart-remove{border:0!important;text-decoration:underline;margin-left:14px!important;width:auto!important}
-.dw-cart-price{font-weight:600;white-space:nowrap}
-.dw-summary{position:sticky;top:100px;background:#fff;padding:24px;border:1px solid var(--dw-line)}
-.dw-summary-row{display:flex;justify-content:space-between;padding:8px 0;color:#555}
-.dw-summary-total{display:flex;justify-content:space-between;font-size:20px;font-weight:700;border-top:1px solid #ddd;padding-top:16px;margin-top:10px}
-.dw-men-hero{background:#111;color:#fff;min-height:430px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;margin-bottom:42px}
-.dw-men-copy{padding:70px;display:flex;flex-direction:column;justify-content:center}
-.dw-men-copy h1{font-size:clamp(54px,8vw,110px);line-height:.86;margin:12px 0 22px;letter-spacing:-.06em}
-.dw-men-copy p{max-width:520px;color:#bbb;line-height:1.6}
-.dw-men-visual{background:#ddd;min-height:430px;background-size:cover;background-position:center}
-@media(max-width:1000px){.dw-final-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.dw-cart-layout{grid-template-columns:1fr}.dw-summary{position:static}.dw-men-copy{padding:45px}.dw-men-hero{grid-template-columns:1fr}.dw-men-visual{min-height:330px}}
-@media(max-width:700px){.dw-final-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.dw-cart-item{grid-template-columns:105px minmax(0,1fr);gap:13px}.dw-cart-img{width:105px;height:125px}.dw-cart-price{grid-column:2}.dw-product-info{padding:10px 2px 14px}.dw-product-actions{display:none}.dw-men-copy{padding:30px 22px}.dw-men-copy h1{font-size:62px}.dw-men-visual{min-height:260px}}
-</style>
-</head>
+<style id="dw-realistic-product-cart-v2">
+/* Realistic studio presentation for Men/Women product cards */
+.dw-product-card{position:relative;background:linear-gradient(145deg,#151518,#0d0d0f);border:1px solid #29292e;border-radius:18px;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.28);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.dw-product-card:hover{transform:translateY(-7px);box-shadow:0 28px 70px rgba(0,0,0,.48);border-color:#45454c}
+.dw-product-stage{height:360px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 35%,#34343a 0,#19191d 36%,#09090a 78%);display:flex;align-items:center;justify-content:center}
+.dw-product-stage:before{content:"";position:absolute;width:72%;height:58%;border-radius:50%;background:rgba(255,255,255,.06);filter:blur(38px);top:22%;left:14%}
+.dw-product-photo{position:relative;z-index:2;width:86%;height:86%;object-fit:contain;padding:8px;filter:drop-shadow(0 28px 18px rgba(0,0,0,.62));transition:transform .35s ease,filter .35s ease;cursor:pointer}
+.dw-product-card:hover .dw-product-photo{transform:translateY(-5px) scale(1.045);filter:drop-shadow(0 34px 22px rgba(0,0,0,.75))}
+.dw-photo-floor{position:absolute;z-index:1;bottom:25px;width:54%;height:24px;border-radius:50%;background:rgba(0,0,0,.72);filter:blur(13px)}
+.dw-product-badge{position:absolute;z-index:4;top:14px;left:14px;padding:7px 10px;border:1px solid #444;border-radius:999px;background:rgba(8,8,8,.72);backdrop-filter:blur(10px);font-size:9px;font-weight:900;letter-spacing:.14em}
+.dw-heart{position:absolute;z-index:4;right:14px;top:12px;width:38px;height:38px;border:1px solid #444;border-radius:50%;background:rgba(8,8,8,.72);color:#fff;font-size:20px;cursor:pointer}
+.dw-quick{position:absolute;z-index:5;left:14px;right:14px;bottom:14px;padding:13px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:rgba(255,255,255,.94);color:#090909;font-weight:900;letter-spacing:.08em;transform:translateY(12px);opacity:0;transition:.25s}
+.dw-product-card:hover .dw-quick{transform:translateY(0);opacity:1}
+.dw-product-info{padding:17px 17px 19px}.dw-product-cat{font-size:10px;color:#8e8e94;text-transform:uppercase;letter-spacing:.16em}.dw-product-info h3{margin:6px 0;font-size:17px;letter-spacing:-.02em}.dw-product-price{font-size:18px;font-weight:900}.dw-product-meta{display:flex;justify-content:space-between;gap:8px;margin-top:11px;color:#77777e;font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+.gender-realistic-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+/* Cart as a premium physical-product bag */
+.dw-cart-page{max-width:1240px;margin:auto;padding:55px 5% 100px}.dw-cart-top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid #29292e;padding-bottom:32px;margin-bottom:12px}.dw-cart-top h1{font-size:clamp(55px,9vw,110px);line-height:.78;letter-spacing:-.07em;margin:10px 0 20px}.dw-cart-top p{color:#888}.dw-bag-count{font-size:11px;letter-spacing:.2em;color:#888;padding-bottom:15px}.dw-cart-item{display:grid;grid-template-columns:245px 1fr auto;gap:28px;align-items:center;padding:25px 0;border-bottom:1px solid #252529}.dw-cart-media{height:245px;border-radius:16px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 35%,#35353a,#111114 62%,#080809);border:1px solid #29292e;display:flex;align-items:center;justify-content:center}.dw-cart-media img{width:92%;height:92%;object-fit:contain;position:relative;z-index:2;filter:drop-shadow(0 25px 16px rgba(0,0,0,.7))}.dw-cart-glow{position:absolute;width:60%;height:20%;bottom:18px;border-radius:50%;background:#000;filter:blur(16px)}.dw-cart-number{position:absolute;z-index:4;top:12px;left:12px;color:#777;font-size:10px;letter-spacing:.12em}.dw-cart-details h2{font-size:clamp(24px,3vw,42px);margin:7px 0 18px;letter-spacing:-.04em}.dw-cart-options{display:flex;gap:10px;flex-wrap:wrap}.dw-cart-options span{border:1px solid #303035;border-radius:999px;padding:8px 11px;font-size:9px;color:#888;letter-spacing:.12em}.dw-cart-options b{color:#eee;margin-left:4px}.dw-cart-controls{display:flex;align-items:center;gap:10px;margin-top:25px}.dw-cart-controls button{width:36px;height:36px;border:1px solid #38383e;background:#111114;color:#fff;border-radius:8px;cursor:pointer}.dw-cart-controls .dw-remove{width:auto;padding:0 14px;font-size:9px;letter-spacing:.12em}.dw-cart-total{font-size:20px;font-weight:900;align-self:start;padding-top:15px}.dw-summary{max-width:520px;margin:45px 0 0 auto;border:1px solid #29292e;border-radius:18px;padding:25px;background:linear-gradient(145deg,#141417,#0b0b0d);box-shadow:0 25px 70px rgba(0,0,0,.35)}.dw-summary>div{display:flex;justify-content:space-between;padding:11px 0;color:#888;font-size:11px}.dw-summary strong{color:#eee}.dw-summary .dw-summary-total{border-top:1px solid #303035;margin-top:8px;padding-top:20px;color:#fff;font-size:14px}.dw-summary .dw-summary-total strong{font-size:25px}.dw-summary .v5-btn{width:100%;margin-top:10px}.dw-empty-cart{text-align:center;padding:100px 20px;border:1px dashed #333;border-radius:20px;margin-top:20px}.dw-empty-mark{font-size:75px;font-weight:1000;letter-spacing:-.1em;opacity:.12}.dw-empty-cart h2{font-size:34px}.dw-empty-cart p{color:#777;margin-bottom:25px}
+@media(max-width:1000px){.gender-realistic-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}.dw-cart-item{grid-template-columns:190px 1fr}.dw-cart-total{grid-column:2}.dw-cart-media{height:190px}}
+@media(max-width:700px){.gender-realistic-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.dw-product-stage{height:270px}.dw-quick{opacity:1;transform:none}.dw-cart-page{padding:35px 14px 70px}.dw-cart-top{align-items:flex-start}.dw-cart-top h1{font-size:60px}.dw-cart-item{grid-template-columns:120px 1fr;gap:15px}.dw-cart-media{height:145px}.dw-cart-details h2{font-size:22px}.dw-cart-total{grid-column:2;padding-top:0}.dw-cart-controls{flex-wrap:wrap;margin-top:15px}}
+@media(max-width:450px){.gender-realistic-grid{grid-template-columns:1fr!important}.dw-product-stage{height:330px}.dw-cart-item{grid-template-columns:1fr}.dw-cart-media{height:260px}.dw-cart-total{grid-column:auto}.dw-cart-top{display:block}.dw-bag-count{padding:0}}
+</style></head>
 
 <body>
 <div class="announcement">
@@ -625,7 +607,7 @@ document.getElementById("app").innerHTML=`<section class="dragon-campaign" aria-
 <section class="section"><div class="head"><h2>Explore more</h2><button class="btn small" onclick="shop()">SHOP EVERYTHING</button></div><div class="grid">${products.slice(12,32).map(card).join("")}</div></section>
 <section class="section"><div class="head"><h2>More DRAGON WEAR</h2></div><div class="grid">${products.slice(32).map(card).join("")}</div></section>`;
 badge()}
-function card(p){return `<article class="card"><img class="cardimg" src="${p.images[0]}" onerror="this.onerror=null;this.src='assets/product-fallback.svg'"><div class="cardbody"><div class="muted">${p.cat}</div><h3>${p.name}</h3><div class="price">${money(p.price)}</div>${priceTriplet(p.price)}<div class="muted">${p.stock>0?p.stock+" available":"Out of stock"}</div><div class="cardrow"><button class="btn small" onclick="product(${p.id})">VIEW</button><button class="btn red small" onclick="quick(${p.id})" ${p.stock<1?"disabled":""}>ADD</button></div></div></article>`}
+function card(p){return `<article class="dw-product-card"><div class="dw-product-stage"><span class="dw-product-badge">${p.stock>0?"IN STOCK":"SOLD OUT"}</span><button class="dw-heart" onclick="event.stopPropagation();toggleWish(${p.id})">♡</button><img class="dw-product-photo" src="${p.images[0]}" loading="lazy" onerror="this.onerror=null;this.src='assets/product-fallback.svg'" onclick="product(${p.id})"><div class="dw-photo-floor"></div><button class="dw-quick" onclick="quick(${p.id})" ${p.stock<1?"disabled":""}>QUICK ADD</button></div><div class="dw-product-info"><div class="dw-product-cat">${p.cat}</div><h3>${p.name}</h3><div class="dw-product-price">${money(p.price)}</div>${priceTriplet(p.price)}<div class="dw-product-meta"><span>${p.sizes?.join(" / ")||"One Size"}</span><span>${p.colors?.length||0} colours</span></div></div></article>`}
 function shop(){
 document.getElementById("app").innerHTML=`<section class="section"><div class="head"><h2>SHOP</h2>${currencySelect()}</div><div class="search"><input id="q" placeholder="Search products..." oninput="filter()"><button class="btn" onclick="q.value='';filter()">CLEAR</button></div><div class="filters">${["All","T-Shirts","Hoodies","Jeans","Jackets","Shirts","Polos","Long Sleeves","Shorts","Trousers","Cargo","Tracksuits","Sweatshirts","Shoes","Bags","Headwear","Accessories"].map(c=>`<button class="filter ${cat===c?"active":""}" onclick="cat='${c}';shop()">${c}</button>`).join("")}</div><div id="list" class="grid"></div></section>`;filter()}
 function filter(){let q=(document.getElementById("q")?.value||"").toLowerCase();let a=products.filter(p=>(cat==="All"||p.cat===cat)&&(p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)));document.getElementById("list").innerHTML=a.length?a.map(card).join(""):`<div class="empty">No products found.</div>`}
@@ -842,8 +824,8 @@ function searchPage(){
 }
 function runGlobalSearch(){const q=(document.getElementById("globalSearch")?.value||"").toLowerCase();const a=products.filter(p=>`${p.name} ${p.cat} ${p.desc}`.toLowerCase().includes(q));document.getElementById("searchResults").innerHTML=a.length?sectionProducts(a):`<div class="empty-v5">No products matched “${q}”.</div>`}
 function cartPage(){
- const rows=cart.map((x,i)=>{const p=products.find(y=>y.id===x.id);return p?`<div style="display:grid;grid-template-columns:90px 1fr auto;gap:18px;align-items:center;padding:18px 0;border-bottom:1px solid #242428"><img src="${p.images[0]}" style="width:90px;height:110px;object-fit:cover;border-radius:8px"><div><b>${p.name}</b><div class="muted">${x.size} · ${x.color}</div><div style="margin-top:10px"><button class="v5-btn" onclick="qty(${i},-1)">−</button> ${x.qty} <button class="v5-btn" onclick="qty(${i},1)">+</button> <button class="v5-btn" onclick="removeItem(${i})">REMOVE</button></div></div><strong>${money(p.price*x.qty)}</strong></div>`:""}).join("");
- document.getElementById("app").innerHTML=`<div class="content-page"><div class="eyebrow">YOUR BAG</div><h1>CART.</h1>${rows||`<div class="empty-v5">Your cart is empty.<br><button class="v5-btn primary" style="margin-top:18px" onclick="shop()">CONTINUE SHOPPING</button></div>`}${cart.length?`<div style="max-width:520px;margin:35px 0 0 auto;text-align:right"><div style="font-size:22px;margin-bottom:18px">TOTAL <strong>${money(cartTotal())}</strong></div><button class="v5-btn primary" onclick="checkoutPage()">CHECKOUT</button><button class="v5-btn" onclick="whatsapp()">ORDER VIA WHATSAPP</button></div>`:""}</div>`;
+ const rows=cart.map((x,i)=>{const p=products.find(y=>y.id===x.id);return p?`<article class="dw-cart-item"><div class="dw-cart-media"><span class="dw-cart-number">0${i+1}</span><img src="${p.images[0]}" loading="lazy" onerror="this.onerror=null;this.src='assets/product-fallback.svg'"><div class="dw-cart-glow"></div></div><div class="dw-cart-details"><div class="dw-product-cat">${p.cat}</div><h2>${p.name}</h2><div class="dw-cart-options"><span>SIZE <b>${x.size}</b></span><span>COLOUR <b>${x.color}</b></span></div><div class="dw-cart-controls"><button onclick="qty(${i},-1)">−</button><strong>${x.qty}</strong><button onclick="qty(${i},1)">+</button><button class="dw-remove" onclick="removeItem(${i})">REMOVE</button></div></div><div class="dw-cart-total">${money(p.price*x.qty)}</div></article>`:""}).join("");
+ document.getElementById("app").innerHTML=`<section class="dw-cart-page"><div class="dw-cart-top"><div><div class="eyebrow">DRAGON WEAR / YOUR BAG</div><h1>YOUR<br>BAG.</h1><p>Premium pieces, ready to move.</p></div><div class="dw-bag-count">${cart.reduce((n,x)=>n+x.qty,0)} ITEMS</div></div>${rows||`<div class="dw-empty-cart"><div class="dw-empty-mark">DW</div><h2>YOUR BAG IS EMPTY.</h2><p>Start with the latest DRAGON WEAR collection.</p><button class="v5-btn primary" onclick="shop()">SHOP THE COLLECTION</button></div>`}${cart.length?`<div class="dw-summary"><div><span>SUBTOTAL</span><strong>${money(cartTotal())}</strong></div><div><span>SHIPPING</span><strong>CALCULATED AT CHECKOUT</strong></div><div class="dw-summary-total"><span>TOTAL</span><strong>${money(cartTotal())}</strong></div><button class="v5-btn primary" onclick="checkoutPage()">CHECKOUT</button><button class="v5-btn" onclick="whatsapp()">ORDER VIA WHATSAPP</button></div>`:""}</section>`;
 }
 function checkoutPage(){
  if(!cart.length)return cartPage();
@@ -1042,76 +1024,6 @@ function accountPage(){
 const _oldShop=shop;
 shop=function(){_oldShop(); const f=document.querySelector('.filters'); if(f&&!f.innerHTML.includes('Streetwear')) f.insertAdjacentHTML('beforeend','<button class="filter" onclick="cat=\'Streetwear\';shop()">Streetwear</button>');};
 </script>
-<script id="dragon-final-fixes">
-(function(){
-  // Version/migration: prevent stale localStorage from breaking Men/Women/product data.
-  const STORE_VERSION='dw_products_v7';
-  let savedVersion=localStorage.getItem('dw_store_version');
-  if(savedVersion!==STORE_VERSION){
-    try{
-      let saved=JSON.parse(localStorage.getItem('dw_products')||'null');
-      if(Array.isArray(saved)&&saved.length){
-        const byId=new Map(saved.map(p=>[p.id,p]));
-        if(typeof products!=='undefined') products=products.map(p=>({...p,...(byId.get(p.id)||{}),gender:p.gender||byId.get(p.id)?.gender||((p.id||0)<=49?'Men':'Women')}));
-      }
-      localStorage.setItem('dw_store_version',STORE_VERSION);
-      localStorage.setItem('dw_products',JSON.stringify(products));
-    }catch(e){console.warn('DRAGON WEAR data migration',e)}
-  }
-  function finalImg(p){return (p.images&&p.images[0])||''}
-  window.finalCard=function(p){
-    const sale=p.salePrice&&p.salePrice<p.price;
-    return `<article class="dw-product">
-      <div class="dw-product-media">
-        ${sale?'<span class="dw-badge">SALE</span>':''}
-        <button class="dw-product-wish" aria-label="Add ${p.name} to wishlist" onclick="event.stopPropagation();toggleWishlist&&toggleWishlist(${p.id})">♡</button>
-        <img src="${finalImg(p)}" alt="${String(p.name).replace(/"/g,'&quot;')}" loading="lazy" onerror="this.style.objectFit='contain';this.style.padding='12%'">
-      </div>
-      <div class="dw-product-info">
-        <div class="dw-product-name">${p.name}</div>
-        <div class="dw-product-meta">${p.cat} · ${p.colors?.[0]||'Original'}</div>
-        <div class="dw-product-price">${money(p.price)}</div>
-        <div class="dw-product-actions">
-          <button class="btn" onclick="product(${p.id})">VIEW</button>
-          <button class="btn red" onclick="quick(${p.id})" ${p.stock<1?'disabled':''}>ADD TO BAG</button>
-        </div>
-      </div>
-    </article>`;
-  };
-  window.showMen=function(){finalGenderPage('Men')};
-  window.showWomen=function(){finalGenderPage('Women')};
-  window.showShop=function(){shop()};
-  function finalGenderPage(g){
-    const app=document.getElementById('app');
-    if(!app)return;
-    const hero=(document.querySelector('.gender-realistic-hero')?.style.backgroundImage||'').replace(/^url\(["']?|["']?\)$/g,'');
-    app.innerHTML=`<section>
-      <div class="dw-men-hero"><div class="dw-men-copy"><div class="eyebrow" style="color:#aaa">DRAGON WEAR / ${g.toUpperCase()}</div><h1>${g.toUpperCase()}.</h1><p>Original DRAGON WEAR streetwear. Clean product-focused presentation with no models.</p><div class="page-actions"><button class="v5-btn primary" onclick="document.getElementById('dwGenderList').scrollIntoView({behavior:'smooth'})">SHOP ${g.toUpperCase()}</button><button class="v5-btn" onclick="searchPage()">SEARCH</button></div></div><div class="dw-men-visual" style="background-image:${hero||'linear-gradient(135deg,#222,#aaa)'}"></div></div>
-      <div class="head"><div><div class="eyebrow">COLLECTION</div><h2>${g.toUpperCase()} / NEW SEASON</h2></div>${typeof currencySelect==='function'?currencySelect():''}</div>
-      <div class="search"><input id="dwGenderQ" placeholder="Search ${g.toLowerCase()} products..." oninput="finalGenderFilter('${g}')"><button class="btn" onclick="document.getElementById('dwGenderQ').value='';finalGenderFilter('${g}')">CLEAR</button></div>
-      <div id="dwGenderFilters" class="filters"></div>
-      <div id="dwGenderList" class="dw-final-grid"></div>
-    </section>`;
-    const cats=[...new Set(products.filter(p=>p.gender===g).map(p=>p.cat))];
-    const f=document.getElementById('dwGenderFilters');
-    f.innerHTML='<button class="filter active" data-cat="All">ALL</button>'+cats.map(c=>`<button class="filter" data-cat="${String(c).replace(/"/g,'&quot;')}">${c}</button>`).join('');
-    f.querySelectorAll('button').forEach(b=>b.onclick=()=>{f.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');finalGenderFilter(g,b.dataset.cat||'All')});
-    finalGenderFilter(g);
-  }
-  window.finalGenderFilter=function(g,c='All'){
-    const q=(document.getElementById('dwGenderQ')?.value||'').toLowerCase();
-    const list=products.filter(p=>p.gender===g&&(c==='All'||p.cat===c)&&(`${p.name} ${p.cat} ${p.desc||''} ${p.colors||''}`).toLowerCase().includes(q));
-    const el=document.getElementById('dwGenderList'); if(el)el.innerHTML=list.length?list.map(finalCard).join(''):'<div class="empty">No products found.</div>';
-  };
-  window.cartPage=function(){
-    const app=document.getElementById('app'); if(!app)return;
-    const items=cart.map((x,i)=>{const p=products.find(y=>y.id===x.id);if(!p)return '';return `<div class="dw-cart-item"><img class="dw-cart-img" src="${finalImg(p)}" alt="${p.name}" loading="lazy"><div><div class="dw-cart-title">${p.name}</div><div class="dw-cart-sub">${p.cat} · ${x.color} · Size ${x.size}</div><div class="dw-cart-controls"><button onclick="qty(${i},-1)">−</button><span style="min-width:42px;text-align:center">${x.qty}</span><button onclick="qty(${i},1)">+</button><button class="dw-cart-remove" onclick="removeItem(${i})">Remove</button></div></div><div class="dw-cart-price">${money(p.price*x.qty)}</div></div>`}).join('');
-    const subtotal=cartTotal();
-    app.innerHTML=`<section class="content-page"><div class="eyebrow">YOUR BAG</div><h1>CART.</h1><div class="dw-cart-layout"><div>${items||'<div class="empty-v5">YOUR BAG IS EMPTY.<br><button class="v5-btn primary" style="margin-top:18px" onclick="shop()">SHOP NOW</button></div>'}</div>${cart.length?`<aside class="dw-summary"><div class="eyebrow">SUMMARY</div><div class="dw-summary-row"><span>Subtotal</span><strong>${money(subtotal)}</strong></div><div class="dw-summary-row"><span>Shipping</span><span>Calculated at checkout</span></div><div class="dw-summary-total"><span>Total</span><span>${money(subtotal)}</span></div><button class="v5-btn primary" style="width:100%;margin-top:20px" onclick="checkoutPage()">CHECKOUT</button><button class="v5-btn" style="width:100%;margin-top:10px" onclick="shop()">CONTINUE SHOPPING</button></aside>`:''}</div></section>`;
-  };
-})();
-</script>
-
 <section class="dw-panel" style="max-width:1200px;margin:40px auto">
 <div class="eyebrow">DRAGON WEAR SYSTEM</div><h2>EVERYTHING IN ONE STORE</h2>
 <div class="dw-grid">
@@ -1128,5 +1040,22 @@ shop=function(){_oldShop(); const f=document.querySelector('.filters'); if(f&&!f
 <h3>NO MODELS. JUST THE PRODUCT.</h3>
 <p class="dw-muted">DRAGON WEAR products are presented as clean standalone product visuals, with original DRAGON WEAR branding on selected pieces and footwear.</p>
 </div>
+<script>
+(function(){
+const imgMap={
+'T-Shirts':'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=90','Hoodies':'https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1200&q=90','Jeans':'https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1200&q=90','Jackets':'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1200&q=90','Shoes':'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=90','Accessories':'https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=1200&q=90','Cargo':'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=90','Shirts':'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1200&q=90'};
+const imageFor=p=>imgMap[p.cat]||imgMap['T-Shirts'];
+const fallback=p=>p.images?.[0]||'';
+window.card=function(p){return `<article class="card"><img class="cardimg" src="${imageFor(p)}" loading="lazy" alt="${p.name}" onerror="this.onerror=null;this.src='${fallback(p)}'"><div class="cardbody"><div class="muted">${p.cat}</div><h3>${p.name}</h3><div class="price">${money(p.price)}</div>${priceTriplet(p.price)}<div class="muted">${p.stock>0?p.stock+' available':'Out of stock'}</div><div class="cardrow"><button class="btn small" onclick="advancedProduct(${p.id})">VIEW</button><button class="btn red small" onclick="quick(${p.id})" ${p.stock<1?'disabled':''}>ADD</button></div></div></article>`};
+window.v5Card=function(p,o={}){return `<article class="product-v5"><div class="product-v5-media"><img loading="lazy" src="${imageFor(p)}" alt="${p.name}" onerror="this.onerror=null;this.src='${fallback(p)}'">${o.sale?'<span class="sale-badge">SALE</span>':o.new?'<span class="new-badge">NEW</span>':''}<button class="quick-add" onclick="quick(${p.id})">QUICK ADD</button></div><div class="product-v5-info"><div class="product-v5-meta"><span>${p.cat}</span><span class="stars">★★★★★</span></div><h3>${p.name}</h3><div class="product-v5-meta"><strong>${money(p.price)}</strong><span>${p.stock} in stock</span></div><div class="product-v5-meta"><button class="v5-btn" onclick="advancedProduct(${p.id})">VIEW</button><button class="v5-btn" onclick="toggleWish(${p.id});wishCount()">♡</button></div></div></article>`};
+window.sectionProducts=(a,o={})=>`<div class="product-grid-v5">${a.map(p=>v5Card(p,o)).join('')}</div>`;
+window.advancedProduct=function(id){const p=products.find(x=>x.id===id);if(!p)return;const u=imageFor(p);modal(`<button class="close" onclick="closeModal()">×</button><div class="detail"><div><img id="main" class="detailmain" src="${u}" onerror="this.onerror=null;this.src='${fallback(p)}'" alt="${p.name}"></div><div><span class="tag">${p.cat}</span><h2>${p.name}</h2>${productMeta(p)}<div class="detailprice">${money(p.price)}</div><p>${p.desc}</p><div class="stock">${p.stock>0?'✓ '+p.stock+' in stock':'Out of stock'}</div><div class="option"><label>SIZE</label><div id="sizes" class="choices">${p.sizes.map((s,i)=>`<button class="choice ${i?'':'selected'}" onclick="pick(this)">${s}</button>`).join('')}</div></div><div class="option"><label>COLOUR</label><div id="colors" class="choices">${p.colors.map((s,i)=>`<button class="choice ${i?'':'selected'}" onclick="pick(this)">${s}</button>`).join('')}</div></div><button class="btn red" style="width:100%" onclick="add(${p.id},document.querySelector('#sizes .selected').textContent,document.querySelector('#colors .selected').textContent);closeModal()">ADD TO CART</button></div></div>`)};
+window.newArrivals=function(){cat='All';document.getElementById('app').innerHTML=`<div class="content-page"><div class="eyebrow">DRAGON WEAR / NEW</div><h1>NEW<br>ARRIVALS.</h1><p>Fresh pieces from the latest drop.</p><div style="margin-top:45px">${sectionProducts(products.slice(0,16),{new:true})}</div></div>`;wishCount()};
+window.finalGenderPage=function(g){const a=products.filter(p=>p.gender===g);document.getElementById('app').innerHTML=`<section class="gender-realistic-page"><div class="gender-realistic-hero"><img src="${imageFor(a[0]||products[0])}" alt="${g} collection" onerror="this.onerror=null;this.src='${fallback(a[0]||products[0])}'"><div class="gender-realistic-copy"><span class="gender-realistic-tag">DRAGON WEAR / 2026 COLLECTION</span><h1>${g==='Men'?'MEN’S COLLECTION':'WOMEN’S COLLECTION'}</h1><p>Original DRAGON WEAR pieces. No models — product-focused presentation.</p></div></div><div class="gender-realistic-note"><div><div class="eyebrow">PRODUCT FOCUS</div><h2>SHOP ${g.toUpperCase()}.</h2></div></div><div class="search"><input id="q" placeholder="Search ${g.toLowerCase()} products..." oninput="genderFilter('${g}')"></div><div class="filters"><button class="filter active" onclick="genderFilter('${g}')">ALL ${g.toUpperCase()}</button></div><div id="list" class="grid gender-realistic-grid"></div></section>`;genderFilter(g)};
+window.genderFilter=function(g){const q=(document.getElementById('q')?.value||'').toLowerCase();const a=products.filter(p=>p.gender===g&&(p.name+' '+p.cat).toLowerCase().includes(q));document.getElementById('list').innerHTML=a.map(card).join('')};
+window.showMen=()=>finalGenderPage('Men');window.showWomen=()=>finalGenderPage('Women');
+})();
+
+</script>
 </body>
 </html>

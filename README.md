@@ -1,16 +1,5 @@
-# DRAGON WEAR — Final Store Build
+# DRAGON WEAR
 
-## Run locally
-npm ci
-npm start
+Deploy with Render using `npm install` and `npm start`.
 
-Then open http://localhost:3000
-
-## Render
-Build: `npm ci`
-Start: `npm start`
-Health: `/health`
-
-Add `PAYSTACK_SECRET_KEY` only in Render Environment Variables. Never place it in `public/index.html`.
-
-The custom domain should be configured in Render; Render handles TLS for configured custom domains.
+The website is in `public/index.html`. The frontend uses product-category image URLs with the existing product assets as browser fallbacks. Real Paystack processing requires a server-side catalog/database and real credentials configured in Render environment variables.
